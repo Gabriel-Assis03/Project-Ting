@@ -1,5 +1,3 @@
-import sys
-# import os
 from ting_file_management.file_management import txt_importer
 
 
@@ -8,7 +6,7 @@ def process(path_file, instance):
         if path_file == ins:
             return None
     text = txt_importer(path_file)
-    if text == None:
+    if text is None:
         return None
     ret = {
         "nome_do_arquivo": path_file,
