@@ -9,12 +9,14 @@ def exists_word(word, instance):
         text = txt_importer(path)
         for i in range(len(text)):
             if word.lower() in text[i].lower():
-                line.append({"linha": i})
+                line.append({"linha": i + 1 })
+        if len(line) == 0:
+            return line
         ret.append(
             {
-                "palavra": word,
-                "arquivo": path,
-                "ocorrencias": line
+                'palavra': word,
+                'arquivo': path,
+                'ocorrencias': line
             }
         )
     return ret
