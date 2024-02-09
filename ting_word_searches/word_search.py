@@ -9,7 +9,7 @@ def exists_word(word, instance):
         text = txt_importer(path)
         for i in range(len(text)):
             if word.lower() in text[i].lower():
-                line.append({"linha": i + 1 })
+                line.append({"linha": i + 1})
         if len(line) == 0:
             return line
         ret.append(
@@ -20,7 +20,6 @@ def exists_word(word, instance):
             }
         )
     return ret
-
 
 
 
